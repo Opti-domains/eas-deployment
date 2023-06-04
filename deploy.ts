@@ -30,6 +30,8 @@ async function main() {
   const wallet = getWallet()
   const provider = getProvider()
 
+  const chainId = (await provider.getNetwork()).chainId
+
   // Auto-calculate the gas price
   const gasPrice = await provider.getGasPrice();
 
@@ -56,6 +58,7 @@ async function main() {
     {
       const gasLimit = 2000000
       const rawTransaction = {
+        chainId,
         nonce: '0x'+nonce.toString(16), // Nonce of the sender's address
         gasPrice, // Gas price (adjust as needed)
         gasLimit: '0x'+gasLimit.toString(16), // Gas limit (adjust as needed)
@@ -73,6 +76,7 @@ async function main() {
     {
       const gasLimit = 2000000
       const rawTransaction = {
+        chainId,
         nonce: '0x'+nonce.toString(16), // Nonce of the sender's address
         gasPrice, // Gas price (adjust as needed)
         gasLimit: '0x'+gasLimit.toString(16), // Gas limit (adjust as needed)
@@ -92,6 +96,7 @@ async function main() {
     {
       const gasLimit = 2000000
       const rawTransaction = {
+        chainId,
         nonce: '0x'+nonce.toString(16), // Nonce of the sender's address
         gasPrice, // Gas price (adjust as needed)
         gasLimit: '0x'+gasLimit.toString(16), // Gas limit (adjust as needed)
@@ -112,6 +117,7 @@ async function main() {
     {
       const gasLimit = 6000000
       const rawTransaction = {
+        chainId,
         nonce: '0x'+nonce.toString(16), // Nonce of the sender's address
         gasPrice, // Gas price (adjust as needed)
         gasLimit: '0x'+gasLimit.toString(16), // Gas limit (adjust as needed)
