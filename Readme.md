@@ -102,8 +102,9 @@ Please follow the guide on how to verify "Immutable Create2 Factory" at https://
 
 ## Benefits
 
-1. EAS deployed to the same address across different chains
-2. The same address will always have the same implementation
-3. EAS can be deployed permissionless by anyone
-4. Work on every OP Stack based chain and nearly every EVM based chains
-5. Contract address has 10 leading zeros which potentially reduces gas usage
+1. EAS can be deployed to the same address across different chains.
+2. The same address will always have the same implementation.
+3. The deployment process can be undertaken by anyone permissionlessly, promoting a more decentralized approach.
+4. This approach is compatible with every OP Stack based chain and nearly every EVM based chain.
+5. A contract address with 10 leading zeros could potentially reduce gas usage.
+6. EAS can be more easily integrated by interoperable protocols as the need to define the EAS contract address on each chain is eliminated.
